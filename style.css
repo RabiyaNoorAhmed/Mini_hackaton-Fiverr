@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    --primary--color: #19a463;
+    --primary--color-p: rgb(13, 189, 107);
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    
+    font-family: "Roboto", sans-serif !important;
+  }
+ 
+
+  /* Navbar */
+  
+  ul {
+    list-style: none;
+    padding: 0 !important;
+  }
+  
+  a:link {
+    text-decoration: none;
+  }
+  
+  #top-nav {
+    z-index: 0;
+  }
+  
+  nav ul > li {
+    cursor: pointer;
+  }
+  
+  nav {
+    z-index: 10 !important;
+  }
+  
+  #mobile-nav > #sidebar {
+    width: 250px;
+    overflow-x: hidden;
+    margin-left: -250px;
+    transition: margin 0.05s linear;
+  }
+  
+  .mobile-nav-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.466);
+    backdrop-filter: blur(1px);
+    z-index: 10;
+  }
+  
+  .join-btn:hover {
+    border-color: var(--primary--color) !important;
+    background-color: var(--primary--color) !important;
+  }
+  
+  .join-btn-second {
+    color: var(--primary--color);
+    border-color: var(--primary--color) !important;
+  }
+  
+  .join-btn-second:hover {
+    color: white;
+    background-color: var(--primary--color) !important;
+  }
+  
+  .nav-options {
+    top: 60px !important;
+  }
+  
+  .nav-options a {
+    color: rgb(161, 161, 161) !important;
+    white-space: nowrap;
+  }
+  
+  .nav-options-content {
+    height: 40px;
+  }
+  
+  .nav-options ul {
+    overflow-x: auto;
+  }
+  
+  .nav-options ul::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .nav-options ul {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .nav-options li {
+    position: relative;
+    margin: 0 10px;
+  }
+  
+  .nav-options li:hover::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    top: 31px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-bottom: 2px solid var(--primary--color-p);
+    transition: width 0.05s linear;
+  }
+  
+  /* Hero section */
+  
+  .hero {
+ background-color: #023a15;
+    width: 100%;
+    height: 680px;
+    background-position: 70% 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-image: url("./images/bg-hero.png");
+  }
+  
+  .hero > div {
+    width: 50%;
+  }
+  #clients-container img{
+display: inline-flex;
+align-items: center; 
+justify-content: space-between;
+margin-left: 150px;
+  }
+  
+  @media screen and (max-width: 992px) {
+    .hero > div {
+      width: 70%;
+    }
+   
+  }
+  
+  @media screen and (max-width: 768px) {
+    .hero {
+      height: 530px;
+      background-image: none; 
+    }
+  
+    .hero > div {
+      width: 100%;
+    }
+  }
+  
+  .hero input {
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    font-weight: 500;
+    outline: none;
+  }
+  
+  .hero input::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: gray;
+    opacity: 1; /* Firefox */
+  }
+  
+  .hero input:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: red;
+  }
+  
+  .hero input::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: red;
+  }
+  
+  .hero input[type="button"]:hover {
+    background-color: var(--primary--color) !important;
+  }
+  
+  .hero > div > div > div > span {
+    font-size: 0.8rem;
+    cursor: pointer;
+  }
+  
+  .hero > div > div > div > span:hover {
+    background-color: white;
+    color: black;
+  }
+
+  /* Fiverr services */
+  .popular-services {
+    position: relative;
+  }
+  
+  #services-slider-wrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .box .d-flex{
+    display: flex;
+  }
+  .contant1{
+    
+    margin: 0 2rem;
+  }
+  .image{
+    height: 100%;
+    width: 100%;
+    position: relative;
+  }
+  .text{
+    position: absolute;
+    top: 8rem;
+    padding: 1.5rem;
+  }
+  .box_para{
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+  }
+  .box_head{
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+  }
+
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  #services-slider-wrapper {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .slider-right-arrow {
+    right: 10px;
+    box-shadow: 1px 1px 5px 0px rgb(177, 177, 177);
+  }
+  
+  .slider-left-arrow {
+    left: 10px;
+    box-shadow: -1px 1px 5px 0px rgb(177, 177, 177);
+  }
+  
+  .slider-left-arrow, .slider-right-arrow {
+    position: absolute;
+    font-size: 3rem;
+    line-height: 35px;
+    width: 45px;
+    height: 45px;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-color: white;
+    border-radius: 50%;
+    padding: 0 15px;
+    cursor: pointer;
+  }
+
+  .contant1{
+    margin: 0 2rem;
+  }
+  .image{
+    position: relative;
+  }
+  .text{
+    position: absolute;
+    top: 9rem;
+    padding: 1rem;
+  }
+  .box_para{
+    margin: 0;
+    color: white;
+    font-size: 1rem;
+  }
+  .box_head{
+    margin: 0;
+    color: white;
+    font-size: 2rem;
+  }
+  
+  /* Our Qualities */
+  .qlts-video-thumb {
+    position: relative;
+  }
+  
+  .qlts-video-thumb::after {
+    content: "";
+    display: inline-block;
+    background: url("https://fiverr-res.cloudinary.com/npm-assets/@fiverr/logged_out_homepage_perseus/apps/desktop-play-button.c1196d6.png")
+      no-repeat;
+    background-size: 80px;
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    z-index: 0;
+    cursor: pointer;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  /* services2 */
+ 
+.services {
+    margin-top: 8rem;
+  }
+  
+
+  
+  .services .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 100%;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+  
+  }
+  
+  .container .card {
+  
+    height: 210px;
+   border: none;
+    min-width: 230px;
+    max-width: 230px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .card img {
+    width: 80%;
+    height: 80%;
+    align-items: center;
+   
+  }
+  
+  
+  .card a {
+    position: absolute;
+    bottom: 3px;
+    color: black;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 300;
+    left: 12px;
+    padding: 8px;
+ text-align: center;
+  }
+
+  .card a:hover {
+    color: black;
+  }
+  
+  @media screen and (min-width: 960px) {
+    .services .container {
+      margin-top: -20px;
+      flex-wrap: wrap;
+      flex-basis: 100%;
+      justify-content: start;
+      align-items: center;
+      column-gap: 40px;
+    }
+  
+    .services p {
+      font-size: 35px;
+      font-weight: 400;
+      padding-left: 19px;
+      margin-left: 10px;
+      margin-bottom: 10px;
+    }
+  
+  
+  }
+  
+  /* Explore */
+  #explore > div > a {
+    position: relative;
+  }
+  
+  #explore > div > a::after {
+    content: "";
+    position: absolute;
+    width: 48px;
+    height: 3px;
+    top: 55px;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-bottom: 2px solid rgb(187, 187, 187);
+    transition: width 0.05s linear;
+  }
+  
+  #explore > div > a:hover::after {
+    width: 85px;
+    border-color: var(--primary--color-p);
+  }
+  
+  /* CTA logo maker */
+  .cta-logo-bg {
+    background-image: url('./images/logo-maker-banner-wide-desktop-1352-2x.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    width: 100%;
+  }
+  
+  /* Fiverr guides */
+  .guide-post > img:hover {
+    opacity: 0.9;
+    transition: all 0.1s linear;
+  }
+  
+
+  
+  /* Footer */
+  .footer a {
+    color: rgb(155, 155, 155) !important;
+  }
+  
+  .footer .footer-links li {
+    margin: 14px 0;
+  }
+  
+  .footer .footer-links li a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-social li:hover {
+    background-color: rgb(230, 230, 230);
+    border-radius: 10px;
+  }
